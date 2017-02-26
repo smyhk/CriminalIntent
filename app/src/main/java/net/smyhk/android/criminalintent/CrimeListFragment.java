@@ -46,6 +46,7 @@ public class CrimeListFragment extends Fragment {
 
         private TextView mTitleTextView;
         private TextView mDateTextView;
+        private TextView mRequiresPoliceButton;
         private Crime mCrime;
 
         // constructor
@@ -89,6 +90,11 @@ public class CrimeListFragment extends Fragment {
         public void onBindViewHolder(CrimeHolder holder, int position) {
             Crime crime = mCrimes.get(position);
             holder.bind(crime);
+        }
+
+        @Override
+        public int getItemViewType(int position) {
+            return 0;
         }
 
         @Override

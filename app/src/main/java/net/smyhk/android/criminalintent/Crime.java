@@ -13,11 +13,20 @@ public class Crime {
     private String mTitle;
     private Date mDate;
     private boolean mSolved;
+    private boolean mRequiresPolice;
 
     // constructor
     public Crime() {
         mId = UUID.randomUUID();
         mDate = new Date();
+    }
+
+    public boolean getRequiresPolice() {
+        return mRequiresPolice;
+    }
+
+    public void setRequiresPolice(boolean requiresPolice) {
+        mRequiresPolice = requiresPolice;
     }
 
     public String getTitle() {
