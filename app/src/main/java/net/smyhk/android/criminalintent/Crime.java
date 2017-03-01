@@ -2,6 +2,7 @@ package net.smyhk.android.criminalintent;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 import java.util.UUID;
 
 /**
@@ -14,7 +15,7 @@ public class Crime {
     private String mTitle;
     private Date mToday;
     private boolean mSolved;
-    private boolean mRequiresPolice;
+    //private boolean mRequiresPolice;
     private SimpleDateFormat mFormatter;
     private String mDate;
 
@@ -24,13 +25,13 @@ public class Crime {
         mToday = new Date();
     }
 
-    public boolean getRequiresPolice() {
+    /* public boolean getRequiresPolice() {
         return mRequiresPolice;
     }
 
     public void setRequiresPolice(boolean requiresPolice) {
         mRequiresPolice = requiresPolice;
-    }
+    } */
 
     public String getTitle() {
         return mTitle;
@@ -41,14 +42,14 @@ public class Crime {
     }
 
     public String getDate() {
-        mFormatter = new SimpleDateFormat("EEEE d MMM yyyy");
+        mFormatter = new SimpleDateFormat("EEEE d MMM yyyy", Locale.US);
         mDate = mFormatter.format(mToday);
         return mDate;
     }
 
-    public void setDate(Date date) {
-        mToday = date;
-    }
+    //public void setDate(Date date) {
+    //    mToday = date;
+    //}
 
     public boolean isSolved() {
         return mSolved;

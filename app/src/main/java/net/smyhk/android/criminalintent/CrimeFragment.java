@@ -55,14 +55,14 @@ public class CrimeFragment extends Fragment {
         mDateButton.setText(mCrime.getDate());
         mDateButton.setEnabled(false);
 
-        // chapter 8 challenge
+        /*/ chapter 8 challenge
         mRequiresPoliceCheckBox = (CheckBox) v.findViewById(R.id.requies_police);
         mRequiresPoliceCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 mCrime.setRequiresPolice(isChecked);
             }
-        });
+        }); */
 
         mSolvedCheckBox = (CheckBox) v.findViewById(R.id.crime_solved);
         mSolvedCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

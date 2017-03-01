@@ -31,7 +31,7 @@ public class CrimeLab {
             Crime crime = new Crime();
             crime.setTitle("Crime #" + i);
             crime.setSolved(i % 2 == 0); // every other one
-            crime.setRequiresPolice(i % 25 == 0); // every 25th crime
+            //crime.setRequiresPolice(i % 25 == 0); // every 25th crime
             mCrimes.add(crime);
         }
     }
