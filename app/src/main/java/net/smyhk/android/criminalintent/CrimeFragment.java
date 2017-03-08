@@ -21,7 +21,7 @@ public class CrimeFragment extends Fragment {
     private EditText mTitleField;
     private Button mDateButton;
     private CheckBox mSolvedCheckBox;
-    private CheckBox mRequiresPoliceCheckBox;
+    //private CheckBox mRequiresPoliceCheckBox;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,11 +52,11 @@ public class CrimeFragment extends Fragment {
         });
 
         mDateButton = (Button) v.findViewById(R.id.crime_date);
-        mDateButton.setText(mCrime.getDate());
+        mDateButton.setText(mCrime.getDate().toString());
         mDateButton.setEnabled(false);
 
         /*/ chapter 8 challenge
-        mRequiresPoliceCheckBox = (CheckBox) v.findViewById(R.id.requies_police);
+        mRequiresPoliceCheckBox = (CheckBox) v.findViewById(R.id.requires_police);
         mRequiresPoliceCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
