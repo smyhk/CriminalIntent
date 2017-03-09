@@ -32,7 +32,7 @@ public class CrimeFragment extends Fragment {
         super.onCreate(savedInstanceState);
         UUID crimeId = (UUID) getActivity().getIntent()
                 .getSerializableExtra(CrimeActivity.EXTRA_CRIME_ID);
-        mCrime = new Crime();
+        mCrime = CrimeLab.get(getActivity()).getCrime(crimeId);
     }
 
     @Override
