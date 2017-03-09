@@ -12,16 +12,18 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 
+import static android.widget.CompoundButton.*;
+
 /**
  * Created by Steven on 2/23/2017.
  */
 
 public class CrimeFragment extends Fragment {
-    private Crime mCrime;
+
+	private Crime mCrime;
     private EditText mTitleField;
     private Button mDateButton;
-    private CheckBox mSolvedCheckBox;
-    //private CheckBox mRequiresPoliceCheckBox;
+    private CheckBox mSolvedCheckbox;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -30,7 +32,8 @@ public class CrimeFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceSate) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_crime, container, false);
 
         mTitleField = (EditText) v.findViewById(R.id.crime_title);
@@ -55,19 +58,11 @@ public class CrimeFragment extends Fragment {
         mDateButton.setText(mCrime.getDate().toString());
         mDateButton.setEnabled(false);
 
-        /*/ chapter 8 challenge
-        mRequiresPoliceCheckBox = (CheckBox) v.findViewById(R.id.requires_police);
-        mRequiresPoliceCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        mSolvedCheckbox = (CheckBox) v.findViewById(R.id.crime_solved);
+        mSolvedCheckbox.setOnCheckedChangeListener(new OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                mCrime.setRequiresPolice(isChecked);
-            }
-        }); */
-
-        mSolvedCheckBox = (CheckBox) v.findViewById(R.id.crime_solved);
-        mSolvedCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            public void onCheckedChanged(CompoundButton buttonView, 
+                    boolean isChecked) {
                 mCrime.setSolved(isChecked);
             }
         });

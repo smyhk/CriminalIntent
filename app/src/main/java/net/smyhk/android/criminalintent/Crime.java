@@ -13,23 +13,15 @@ public class Crime {
     private String mTitle;
     private Date mDate;
     private boolean mSolved;
-    //private boolean mRequiresPolice;
-    //private SimpleDateFormat mFormatter;
-    //private String mDate;
 
-    // constructor
     public Crime() {
         mId = UUID.randomUUID();
         mDate = new Date();
     }
 
-    /* public boolean getRequiresPolice() {
-        return mRequiresPolice;
+    public UUID getId() {
+        return mId;
     }
-
-    public void setRequiresPolice(boolean requiresPolice) {
-        mRequiresPolice = requiresPolice;
-    } */
 
     public String getTitle() {
         return mTitle;
@@ -40,8 +32,6 @@ public class Crime {
     }
 
     public Date getDate() {
-        //mFormatter = new SimpleDateFormat("EEEE d MMM yyyy", Locale.US);
-        //mDate = mFormatter.format(mToday);
         return mDate;
     }
 
@@ -55,9 +45,5 @@ public class Crime {
 
     public void setSolved(boolean solved) {
         mSolved = solved;
-    }
-
-    public UUID getId() {
-        return mId;
     }
 }
