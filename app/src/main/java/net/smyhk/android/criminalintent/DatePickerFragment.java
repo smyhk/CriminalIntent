@@ -2,7 +2,6 @@ package net.smyhk.android.criminalintent;
 
 import android.app.Activity;
 import android.app.Dialog;
-//import android.icu.util.Calendar;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
